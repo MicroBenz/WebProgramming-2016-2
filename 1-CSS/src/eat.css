@@ -1,0 +1,67 @@
+html, body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0px;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+nav {
+    height: 100px;
+    margin: auto;
+}
+
+nav .nav-brand, nav .nav-search {
+    display: inline-block;
+    height: 100%;
+}
+
+nav .nav-search {
+    float: right;
+}
+
+nav .nav-search input[type="text"] {
+    border: 1px solid grey;
+    border-radius: 5px;
+    font-size: 25px;
+}
+
+nav .nav-search button {
+    background-color: grey;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+nav .nav-brand .branding {
+    font-family: 'Pattaya', sans-serif;
+    font-size: 56px;
+    line-height: 62px;
+}
+
+section.welcoming-salmon {
+    height: 200px;
+    background-color: black;
+}
+
+section.welcoming-salmon .pacman-animate {
+    height: 200px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 49%, rgba(0, 0, 0, 1) 100%), url('img/salmondon.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+section.food-items .food-row .food-item {
+    display: inline-block;
+    width: 33%;
+}
+
+section.food-items .food-row .food-item img {
+    width: 100%;
+}
