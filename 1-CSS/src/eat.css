@@ -41,27 +41,122 @@ nav .nav-search button {
 nav .nav-brand .branding {
     font-family: 'Pattaya', sans-serif;
     font-size: 56px;
-    line-height: 62px;
+}
+
+nav .nav-brand .slogan {
+    margin-top: -16px;
+}
+
+section.menu {
+    text-align: right;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 section.welcoming-salmon {
-    height: 200px;
     background-color: black;
 }
 
-section.welcoming-salmon .pacman-animate {
-    height: 200px;
+section.welcoming-salmon .eater-wrapper {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 49%, rgba(0, 0, 0, 1) 100%), url('img/salmondon.jpg');
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
+section.welcoming-salmon .eater-wrapper .eater {
+    height: 100%;
+}
+
+section.welcoming-salmon .eater-wrapper .eater-top-half {
+    height:45px;
+    width:90px;
+    border-radius: 90px 90px 0 0;
+    -moz-border-radius: 90px 90px 0 0;
+    -webkit-border-radius: 90px 90px 0 0;
+    background-color: white;
+    transition: transform 1s linear;
+    transform-origin: bottom left;
+    transform: rotate(-360deg);
+    animation: eater-top 1s infinite;
+    margin: 0 auto;
+}
+
+section.welcoming-salmon .eater-wrapper .eater-bottom-half {
+    height:45px;
+    width:90px;
+    border-radius:  0 0 90px 90px;
+    -moz-border-radius: 0 0 90px 90px;
+    -webkit-border-radius: 0 0 90px 90px;
+    background-color: white;
+    transition: transform 1s linear;
+    transform-origin: top left;
+    transform: rotate(360deg);    
+    animation: eater-bottom 1s infinite;
+    margin: 0 auto;    
+}
+
+@keyframes eater-bottom {
+    0% {transform: rotate(0deg)}
+    50% {transform: rotate(15deg)}
+    100% {transform: rotate(0deg)}    
+}
+
+@keyframes eater-top {
+    0% {transform: rotate(0deg)}
+    50% {transform: rotate(-15deg)}
+    100% {transform: rotate(0deg)}    
+}
+
+section.food-items {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+section.food-items .food-row {
+    display: flex;
 }
 
 section.food-items .food-row .food-item {
-    display: inline-block;
-    width: 33%;
+    flex: 1;
+    padding: 10px;    
+    border: 3px solid black;    
+    position: relative;
+}
+
+section.food-items .food-row .food-item .food-item-hover {
+    position: absolute;
+    display: none;
+    top: 10px;
+    left: 10px;
+    right: 10px;    
+    bottom: 10px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+}
+
+section.food-items .food-row .food-item:hover .food-item-hover {
+    display: block;
+    text-align: left;
+}
+
+section.food-items .food-row:not(:last-child) .food-item {
+    border-bottom: none;
+}
+
+section.food-items .food-row .food-item:not(:first-child) {
+    border-left: none;
 }
 
 section.food-items .food-row .food-item img {
     width: 100%;
+}
+
+section.food-items .food-row .food-item .food-item-hover .food-name {
+    font-family: 'Pattaya', sans-serif;
+    font-size: 36px;
 }
