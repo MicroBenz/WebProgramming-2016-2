@@ -1,3 +1,4 @@
+/* Global styles and class */
 html, body {
     font-family: 'Open Sans', sans-serif;
     margin: 0px;
@@ -12,6 +13,7 @@ h1, h2, h3, h4, h5, h6, p {
     margin: auto;
 }
 
+/* Nav styles */
 nav {
     height: 100px;
     margin: auto;
@@ -24,18 +26,31 @@ nav .nav-brand, nav .nav-search {
 
 nav .nav-search {
     float: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-nav .nav-search input[type="text"] {
-    border: 1px solid grey;
+nav .nav-search .searchbox {
+    position: relative;
+}
+nav .nav-search .searchbox input[type="text"] {
+    position: absolute;
+    right: 0px;
+    border: none;
+    font-size: 16px;
+    padding: 8px 9px;
     border-radius: 5px;
-    font-size: 25px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
-nav .nav-search button {
+nav .nav-search .searchbox button {
+    position: absolute;
     background-color: grey;
-    border: 1px solid grey;
+    border: 2px solid grey;
     border-radius: 5px;
+    font-size: 13px;
+    padding: 6px 9px;
 }
 
 nav .nav-brand .branding {
@@ -47,6 +62,7 @@ nav .nav-brand .slogan {
     margin-top: -16px;
 }
 
+/* Menu Styles */
 section.menu {
     text-align: right;
     padding-top: 15px;
@@ -125,6 +141,17 @@ section.food-items .food-row .food-item {
     padding: 10px;    
     border: 3px solid black;    
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section.food-items .food-row .food-item .quote {
+    padding-bottom: 10px;
+}
+
+section.food-items .food-row .food-item .quote-owner {
+    text-align: right;
 }
 
 section.food-items .food-row .food-item .food-item-hover {
@@ -142,6 +169,7 @@ section.food-items .food-row .food-item .food-item-hover {
 section.food-items .food-row .food-item:hover .food-item-hover {
     display: block;
     text-align: left;
+    transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
 }
 
 section.food-items .food-row:not(:last-child) .food-item {
@@ -159,4 +187,21 @@ section.food-items .food-row .food-item img {
 section.food-items .food-row .food-item .food-item-hover .food-name {
     font-family: 'Pattaya', sans-serif;
     font-size: 36px;
+}
+
+footer {
+    text-align: center;
+    padding: 50px 10px;
+}
+
+footer h1, footer h2 {
+    padding-bottom: 5px;
+}
+
+footer h1 {
+    font-size: 23px;
+}
+
+footer h2 {
+    font-size: 16px;
 }
