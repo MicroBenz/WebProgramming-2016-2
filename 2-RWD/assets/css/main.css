@@ -1,0 +1,62 @@
+.main-theme-color {
+    background-color: #d293a5 !important;
+}
+
+body {
+    background-image: url('../img/bg.jpg');
+    background-repeat: repeat;
+    background-position: top left;
+    background-attachment: fixed;
+}
+
+body .web-content {
+    background-color: white;
+    margin: 20px 20px 0px;
+    border-radius: 5px;
+}
+
+nav .active-link {
+    background-color: #C37894;
+}
+
+nav .top-nav {
+    padding: 20px;
+}
+nav .top-nav img {
+    width: 400px;
+}
+
+nav .top-nav .web-title {
+    color: #a33a3d;
+    font-size: 21px;
+}
+
+nav .top-nav .web-title .welcome {
+    color: #e5c1cb;
+}
+
+.content-item img {
+    width: 100%;
+}
+
+section.content .content-wrapper {
+    background-color: #d9d9d9;
+}
+
+footer {
+    color: white;
+    background-color: rgb(84, 28, 48);
+    text-align: center;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;    
+}
+
+footer p {
+    margin: 0px;
+}
+
+footer img {
+    width: 35%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
