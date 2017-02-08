@@ -30,6 +30,15 @@ nav .top-nav img {
     width: 400px;
 }
 
+@media(max-width: 768px) {
+    nav .top-nav img {
+        width: 200px;
+    }
+    button {
+        font-size: 10px;
+    }
+}
+
 nav .top-nav .web-title {
     color: #a33a3d;
     font-size: 21px;
@@ -57,6 +66,20 @@ nav .top-nav .web-title .welcome {
 .content-items .content-item:nth-child(3n) {
     padding-right: 0px;
 }
+
+@media(max-width: 768px) {
+    .content-item {
+        padding-left: 0px;
+        padding-right: 0px;        
+    }
+}
+
+@media(min-width: 768px) and (max-width: 1024px) {
+    .content-items .content-item:nth-child(2n+1) {
+        padding-right: 8px;
+    }
+}
+
 .content-item {
     padding-bottom: 15px;
 }
@@ -97,4 +120,10 @@ footer img {
     width: 35%;
     padding-top: 40px;
     padding-bottom: 40px;
+}
+
+@media(max-width: 1024px) {
+    footer img {
+        width: 80%;
+    }
 }
