@@ -2,6 +2,10 @@
     background-color: #d293a5 !important;
 }
 
+.no-padding {
+    padding: 0px;
+}
+
 body {
     background-image: url('../img/bg.jpg');
     background-repeat: repeat;
@@ -35,12 +39,46 @@ nav .top-nav .web-title .welcome {
     color: #e5c1cb;
 }
 
+.welcoming-carousel img {
+    width: 100%;
+}
+
+.content-wrapper {
+    margin-bottom: 20px;
+}
+
+.content-header {
+    font-size: 25px;
+}
+
+.content-items .content-item:nth-child(3n+1) {
+    padding-left: 0px;
+}
+.content-items .content-item:nth-child(3n) {
+    padding-right: 0px;
+}
+.content-item {
+    padding-bottom: 15px;
+}
+
 .content-item img {
     width: 100%;
 }
 
+.content-item .content-description {
+    background-color: white;
+}
+
+.content-item .content-description p {
+    text-align: left !important;
+}
+
 section.content .content-wrapper {
     background-color: #d9d9d9;
+}
+
+table {
+    margin-bottom: 15px;
 }
 
 footer {
