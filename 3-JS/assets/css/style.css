@@ -50,3 +50,23 @@
 #hidden-stamp-marks{
 	opacity: 0;
 }
+
+#stamper-panel div {
+	display: inline-block;
+	position: relative;
+}
+
+#stamper-panel div .stamper {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+}
+
+#stamper-panel div .glower {
+	opacity: 0;
+}
+
+#stamper-panel div .glower.active {
+	opacity: 1;
+}
