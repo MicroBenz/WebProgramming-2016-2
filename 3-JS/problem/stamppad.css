@@ -1,0 +1,52 @@
+#logo{
+	display:block;
+	width:304px;
+	height:50px;
+	margin:auto;
+}
+#stamppad-wrapper{
+	width:620px;
+	height:620px;
+	padding:10px;
+	margin:auto;
+	border:1px solid #AAAAAA;
+	border-radius: 20px;
+}
+#stamper-panel{
+	background:#CCCCCC;
+	text-align:center;
+	border-radius: 5px;
+	padding:5px 5px 0px 5px;
+}
+#stamper-panel .stamper{
+	width:65px;
+	height:60px;
+	cursor:pointer;
+	vertical-align: bottom;
+	background-image: none;
+}
+#stamper-panel .stamper.current{
+	background-image: url(pict/bg_glow.png);
+}
+#canvas-background{
+	width:560px;
+	height:420px;
+	background:url(pict/bg_paper.png) no-repeat;
+	margin: 20px auto;
+	padding:20px 20px;
+}
+#stamppad-canvas{
+	cursor:crosshair;
+	width:560px;
+	height:420px;
+	margin:auto;
+	overflow: hidden;
+	position:relative;
+}
+#stamppad-canvas .stamp-mark{
+	position:absolute;
+	opacity: 0.5;
+}
+#hidden-stamp-marks{
+	opacity: 0;
+}
