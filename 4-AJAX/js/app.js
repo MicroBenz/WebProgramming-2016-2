@@ -8,14 +8,14 @@ var searchResultTemplate = (function () {/*
         <div class="card">
             <div class="card-image">
                 <figure class="image is-1by1">
-                    <img src="{{IMG_SRC}}" style="margin: auto; height: auto">
+                    <img src="{{IMG_SRC}}" style="margin: auto; height: 100%; width: auto;">
                 </figure>
             </div>
             <div class="card-content">
                 <div class="media">
                     <div class="media-content">
-                        <a href="{{URL}}">
-                            <p class="title is-4">{{SEARCH_TITLE}}</p>
+                        <a href="{{URL}}" target="newtab" class="title is-4" style="color: #00d1b2;">
+                            {{SEARCH_TITLE}}
                         </a>
                     </div>
                 </div>
@@ -44,18 +44,21 @@ function createSearchResultElement(title, description, url, imgUrl) {
 }
 
 function callKnowledgeSearch(query) {
+    $('#search-key').removeClass('is-danger');    
+    $('input').blur();
     $('#search-results').empty();
+    $('#search-button').addClass('is-loading');
     $.ajax({
         url: createEndpoint(query)
     })
     .done(function(response) {
-        console.log(response);
+        $('#search-button').removeClass('is-loading');
         var searchResults = response.itemListElement;
         var elems = '';
         for (var i = 0 ; i < searchResults.length ; i += 1) {
             var title = searchResults[i].result.name;
-            var description = searchResults[i].result.description;
-            var url = searchResults[i].result.url;
+            var description = searchResults[i].result.detailedDescription.articleBody;
+            var url = searchResults[i].result.detailedDescription.url;
             var imgUrl;
             if (searchResults[i].result.image === undefined) {
                 imgUrl = noImageSrc;
@@ -72,9 +75,13 @@ function callKnowledgeSearch(query) {
     });
 }
 
-$('#search-button').click(function () {
+$('#search-button').click(function (e) {
+    e.preventDefault();
     var query = $('#search-key').val();
     if (query.trim().length !== 0) {
         callKnowledgeSearch(query);
+    }
+    else {
+        $('#search-key').addClass('is-danger');
     }
 });

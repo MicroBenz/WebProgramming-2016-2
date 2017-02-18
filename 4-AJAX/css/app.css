@@ -1,0 +1,34 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #3F51B5;
+}
+
+.nav .nav-item h1 {
+    color: #ffffff;
+}
+
+section.content {
+    height: 100%;
+    padding-top: 70px;
+    margin-bottom: 0px !important;
+}
+
+section.content .search-box {
+    margin-bottom: 30px
+}
+
+#search-key {
+    width: 250px;
+}
+
+section.content #search-results {
+    margin-bottom: 30px;
+}
