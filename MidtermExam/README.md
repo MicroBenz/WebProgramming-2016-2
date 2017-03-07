@@ -180,7 +180,7 @@ Know of DOM and understand how a DOM tree is used to represent a web page in a b
   - สะดวกขึ้นมาก เพราะเขามีกฎ CSS มาให้แล้ว เราหยิบใช้เฉยๆ แล้ว override บางส่วนเอาถ้าต้องการแต่งให้สวยตามที่เราอยากได้
 
 - Discuss about the goals of Responsive Web Design (RWD)
-  - Goals คือ Share HTML, CSS เดียวกัน แต่แสดงผลได้ทุกหน้าจอ (ไม่ต้องทำแยก mobile site, desktip size)
+  - Goals คือ Share HTML, CSS เดียวกัน แต่แสดงผลได้ทุกหน้าจอ (ไม่ต้องทำแยก mobile site, desktop size)
 
 - Name factors, beyond dimensions, that web designers could consider in deploying the idea of RWD and give example cases in which responding to such factors could practically benefit users’ experience of the web.
   - เมนูด้านบนสุด: จอใหญ่แสดงเต็ม/จอเล็กใช้ Hamburger Menu แทน
