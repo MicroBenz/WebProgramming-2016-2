@@ -97,16 +97,16 @@ Know of DOM and understand how a DOM tree is used to represent a web page in a b
 
 - Write CSS selectors to target elements based on their orders (E.g. first-child, first-of-type).
   - p:first-child -> หยิบแท็ก p ที่เป็นลูกคนแรกของ DOM
-```
-<div>
-  <p>Hello</p> (p:first-child คืออันนี้)
-  <p>World</p>
-</div>
-<div>
-  <p>I am first child</p> (p:first-child อันนี้ด้วย)
-  <p>I am second child</p>
-</div>
-```
+  ```language-HTML
+  <div>
+    <p>Hello</p> (p:first-child คืออันนี้)
+    <p>World</p>
+  </div>
+  <div>
+    <p>I am first child</p> (p:first-child อันนี้ด้วย)
+    <p>I am second child</p>
+  </div>
+  ```
   - p:nth-child(2) -> ลูกคนที่ 2
   - p:nth-child(3n+1) -> ลูกคนที่ 1, 4, 7, 10, ...
   - p:nth-child(odd) -> ลูกคนคี่ (even ก็จะเป็นคนคู่)
@@ -129,7 +129,7 @@ Know of DOM and understand how a DOM tree is used to represent a web page in a b
   - `border: <ความหนา> <รูปแบบ> <สี>` แบบสั้น
   - เช่น border: 1px solid #ffffff;
   - หรือจะทำแบบละเอียดก็ได้
-    ```
+    ```language-css
     border-width: 1px;
     border-style: solid';
     border-color: #ffffff;
@@ -198,7 +198,7 @@ Know of DOM and understand how a DOM tree is used to represent a web page in a b
 
 - Determine the conditions when CSS rules are to be applied based on given Media Queries.
   - ใช้ `@media(เงื่อนไข)` ในการระบุว่า CSS ในนี้จะถูกใช้เมื่อ device ผ่านเงื่อนไขดังกล่าว
-  ```
+  ```language-css
   @media(max-width: 768px) {
     h1 {
       font-size: 14px;
@@ -239,13 +239,13 @@ Know of DOM and understand how a DOM tree is used to represent a web page in a b
 
 - Define and execute JavaScript functions.
   - ประกาศฟังก์ชัน
-  ```
+  ```language-javascript
   function add(a, b) {
     return a + b;
   }
   ```
   - เรียก
-  ```
+  ```language-javascript
   add(1,3) // 4
   ```
 
@@ -313,10 +313,10 @@ Know of DOM and understand how a DOM tree is used to represent a web page in a b
   - `$().css();` read
   - `$().css('background-color', 'black');` set
   - set หลายอันก็ได้
-  ```
+  ```language-javascript
   $().css({
-  'background-color': 'black',
-  'font-size': '14px'
+    'background-color': 'black',
+    'font-size': '14px'
   });
   ```
   - ถ้า set ท่าบน ระวังว่าเราเซ็ต CSS ใน JavaScript ดังนั้นต้องเป็น string
@@ -337,7 +337,7 @@ Know of DOM and understand how a DOM tree is used to represent a web page in a b
 
 - Use the ajax() function in jQuery to asynchronously obtain data from local/remote sources and use the received data to alter some parts of the current web page.  
   - ท่ามาตรฐาน จะใช้อันนี้
-  ```
+  ```language-javascript
   $.ajax({
       url: <url ที่จะยิง api>,
       method: <ประเภท method เช่น GET, POST)
@@ -357,13 +357,14 @@ Know of DOM and understand how a DOM tree is used to represent a web page in a b
   - Cross ข้ามภาษาได้ คือภาษาโปรแกรมอื่นๆ ก็ access ได้เหมือนกัน
 
 - Manually write JSON strings corresponding to JavaScript objects / values.
-  ```
+  ```language-javascript
   var a = {
     name: "John Cena",
     occupation": "Wrestler"
   };
   // JSON String จะมีหน้าตา
   '{"name": "John Cena", "occupation": "Wrestler"}'
+  ```
   - สังเกตว่า JSON นั้นจะใช้ double quote คลุมที่ key ตลอดนะ ในขณะที่ JS Object ไม่ต้องใช้ double quote คลุมที่ key ก็ได้
 
 - Explain JSON strings in terms of their corresponding JavaScript objects / values.
