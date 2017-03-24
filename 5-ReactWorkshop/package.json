@@ -1,0 +1,11 @@
+{
+  "name": "react-workshop",
+  "version": "1.0.0",
+  "description": "Workspace for React Workshop",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "Tananan Tangthanachaikul <microbenz.prob@gmail.com>",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}
